@@ -80,9 +80,9 @@ class Dog
     end.first
   end 
   
-  def update(id)
-    sql = "UPDATE dogs SET name = ?, breed = ? WHERE name = ?"
-    DB[:conn].execute(sql, self.name, self.breed, self.name)
+  def update
+    sql = "UPDATE dogs SET id = ? name = ?, breed = ? WHERE name = ?"
+    DB[:conn].execute(sql, self.id, self.name, self.breed, self.name)
   end 
   
   
