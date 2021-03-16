@@ -61,11 +61,9 @@ class Dog
     dog = DB[:conn].execute(sql, name:, breed:)
     
     if
-    sql = <<-SQL
-      SELECT * FROM dogs WHERE id = ?
-    SQL
+
     else 
-      dog = self.new(id:)
+      dog = self.new(name:, breed:)
     end 
   end
   
