@@ -57,8 +57,8 @@ class Dog
     end.first
   end
   
-  def self.find_or_create_by
-    dog = 
+  def self.find_or_create_by(name:, breed:)
+    dog = DB[:conn].execute(sql, name:, breed:)
     
     if
     sql = <<-SQL
