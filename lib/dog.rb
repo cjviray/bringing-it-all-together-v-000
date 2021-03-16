@@ -80,7 +80,7 @@ class Dog
     end.first
   end 
   
-  def update
+  def update(id)
     sql = "UPDATE dogs SET id = ? WHERE id = ?"
     DB[:conn].execute(sql, self.id, self.id)
   end 
