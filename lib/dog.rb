@@ -63,7 +63,7 @@ class Dog
       SELECT * FROM dogs WHERE id = ?
     SQL
     else 
-      dog = self.new()
+      dog = self.new(id:)
     end 
   end
   
