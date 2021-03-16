@@ -69,7 +69,11 @@ class Dog
     dog
   end
   
-  def save
+  def self.find_by_name
+    sql = <<-SQL
+      SELECT * FROM dogs WHERE name = ?
+      LIMIT 1
+    SQL
     
     
     
