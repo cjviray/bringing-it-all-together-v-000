@@ -58,9 +58,12 @@ class Dog
   end
   
   def self.find_or_create_by
+    if
     sql = <<-SQL
       SELECT * FROM dogs WHERE id = ?
     SQL
+    else 
+  end 
   end
   
 end 
